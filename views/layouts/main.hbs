@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#if title}}{{title}} - {{/if}}Customer Support Intake</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    
+    <link rel="stylesheet" href="/css/custom.css">
+    
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📧</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="row">
+                <div class="twelve columns">
+                    <h1 class="title">
+                        Customer Support Intake
+                    </h1>
+                    {{#if subtitle}}
+                        <p class="subtitle">{{subtitle}}</p>
+                    {{/if}}
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            {{{body}}}
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="row">
+                <div class="twelve columns">
+                    <hr>
+                    <p class="footer-text">
+                        Powered by Node.js, Express, and Kafka
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="/js/app.js"></script>
+</body>
+</html>

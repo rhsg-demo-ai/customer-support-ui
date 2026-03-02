@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="twelve columns">
+        <form action="/submit" method="POST" class="intake-form">
+            <!-- Message Selection -->
+            <div class="form-group">
+                <label for="messageSelect">Select Sample Message:</label>
+                <select id="messageSelect" name="selectedFile" class="form-control" required onchange="updatePreview()">
+                    <option value="">Choose a message...</option>
+                    {{#each intakeFiles}}
+                        <option value="{{@key}}">{{this.displayName}}</option>
+                    {{/each}}
+                </select>
+                <small class="form-help">Select one of the pre-loaded customer support messages</small>
+            </div>
+            
+            <!-- Content Preview -->
+            <div class="form-group">
+                <label for="contentPreview">Message Content:</label>
+                <div class="preview-section">
+                    <textarea 
+                        id="contentPreview" 
+                        name="content" 
+                        class="form-control" 
+                        readonly 
+                        placeholder="Select a message above to preview its content..."
+                        rows="8">
+                    </textarea>
+                </div>
+                <small class="form-help">This is the content that will be sent to Kafka</small>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" id="submitBtn" class="btn-primary" disabled>
+                    📤 Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    // Make intake files available to JavaScript
+    window.intakeFiles = {{{intakeFilesJson}}};
+</script>

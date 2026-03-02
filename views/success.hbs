@@ -1,0 +1,58 @@
+<div class="success-container">
+    <div class="row">
+        <div class="twelve columns">
+            <h2 class="success-title">Message Submitted Successfully!</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="twelve columns">
+            <div class="message-details">
+                <div class="row">
+                    <div class="four columns">
+                        <strong>Source File:</strong>
+                    </div>
+                    <div class="eight columns">
+                        {{fileName}}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="four columns">
+                        <strong>Kafka Topic:</strong>
+                    </div>
+                    <div class="eight columns">
+                        {{kafkaTopic}}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="four columns">
+                        <strong>Message ID:</strong>
+                    </div>
+                    <div class="eight columns">
+                        <div>{{messageId}}</div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="four columns">
+                        <strong>Submitted At:</strong>
+                    </div>
+                    <div class="eight columns">
+                        {{timestamp}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="twelve columns">
+            <a href="/" class="btn-primary" style="width: 100%; text-align: center; text-decoration: none;">
+                Submit Another Message
+            </a>
+        </div>
+    </div>
+
+</div>

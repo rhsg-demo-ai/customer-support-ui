@@ -1,0 +1,253 @@
+/* Custom styles to complement Skeleton CSS */
+
+/* Body and layout */
+body {
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title .icon {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Main content */
+.main-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-help {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #33c3f0;
+    box-shadow: 0 0 0 2px rgba(51, 195, 240, 0.1);
+}
+
+/* Textarea specific */
+textarea.form-control {
+    height: 120px;
+    resize: vertical;
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #33c3f0;
+    border-color: #33c3f0;
+    color: white;
+    font-weight: 600;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #1eaedb;
+    border-color: #1eaedb;
+    transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    background-color: #f8f9fa;
+    border-color: #e9ecef;
+    color: #495057;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #e9ecef;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Preview section */
+.preview-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    margin-top: 1rem;
+}
+
+/* Success page styles */
+.success-container {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 6rem;
+    color: #5cb85c;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.success-title {
+    color: #5cb85c;
+    margin-bottom: 2rem;
+}
+
+.message-details {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+/* Error page styles */
+.error-container {
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 6rem;
+    color: #d9534f;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.error-title {
+    color: #d9534f;
+    margin-bottom: 2rem;
+}
+
+.error-details {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 2rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+    border: 1px solid #f5c6cb;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.kafka-info {
+    font-weight: 600;
+}
+
+.kafka-info code {
+    background-color: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 550px) {
+    .container {
+        margin-top: 1rem;
+    }
+    
+    .main-content {
+        padding: 2rem;
+    }
+    
+    .title {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }

@@ -1,0 +1,76 @@
+<div class="error-container">
+    <div class="row">
+        <div class="twelve columns">
+            <span class="error-icon">❌</span>
+            <h2 class="error-title">Error Submitting Message</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="twelve columns">
+            <div class="error-details">
+                <h5>⚠️ What happened?</h5>
+                <p>There was an error submitting your message to Kafka. This could be due to:</p>
+                <ul>
+                    <li>Kafka broker connection issues</li>
+                    <li>Authentication problems</li>
+                    <li>Network connectivity issues</li>
+                    <li>Topic access permissions</li>
+                </ul>
+                
+                {{#if errorMessage}}
+                <div class="mt-2">
+                    <strong>📝 Error Details:</strong>
+                    <pre style="background: #fff; padding: 1rem; border-radius: 4px; margin-top: 1rem; overflow-x: auto;"><code>{{errorMessage}}</code></pre>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="twelve columns">
+            <div style="background-color: #f8f9fa; padding: 2rem; border-radius: 6px; border-left: 4px solid #f0ad4e;">
+                <h5>🔧 Troubleshooting Tips:</h5>
+                <ol>
+                    <li><strong>Check Kafka Connection:</strong> Ensure the Kafka broker is running and accessible</li>
+                    <li><strong>Verify Credentials:</strong> Check if authentication credentials are correct</li>
+                    <li><strong>Network Access:</strong> Confirm network connectivity to the Kafka broker</li>
+                    <li><strong>Topic Permissions:</strong> Verify you have write access to the topic</li>
+                </ol>
+                
+                <div class="mt-2">
+                    <strong>🎯 Current Configuration:</strong><br>
+                    <code>Broker: {{kafkaBroker}}</code><br>
+                    <code>Topic: {{kafkaTopic}}</code>
+                    {{#if kafkaSecurityProtocol}}
+                        <br><code>Security Protocol: {{kafkaSecurityProtocol}}</code>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="six columns">
+            <a href="/" class="btn-secondary" style="width: 100%; text-align: center;">
+                ← Back to Form
+            </a>
+        </div>
+        <div class="six columns">
+            <button onclick="window.location.reload()" class="btn-primary" style="width: 100%;">
+                🔄 Try Again
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Auto-refresh after 30 seconds if user doesn't take action
+    setTimeout(() => {
+        showNotification('Auto-refreshing in 5 seconds...', 'info');
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 5000);
+    }, 30000);
+</script>
